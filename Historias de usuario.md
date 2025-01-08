@@ -42,6 +42,16 @@ entonces soy redirigido a los sitios correcpondientes.
 
 ### Historia de usuario n° 5
 Como usuaria de Filmin
+quiero acceder a contenido específico 
+para no nvagar por toda la página principal.
+
+Test de aceptación
+Dado que hay contengido espcífico
+cuando estoy en la página principal 
+entonces veo las opciones en la parte superior de la misma.
+
+### Historia de usuario n° 5
+Como usuaria de Filmin
 quiero 
 para 
 
