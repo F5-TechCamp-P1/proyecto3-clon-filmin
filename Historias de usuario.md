@@ -1,6 +1,6 @@
 ## Historias de usuario
 
-###Historia de usuario n° 1
+### Historia de usuario n° 1
 Como usuario de Filmin
 quiero ingresar a la web de Filmin
 para conocer el contenido disponible en la plataforma
