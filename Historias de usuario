@@ -1,6 +1,6 @@
-Historias de usuario
+##Historias de usuario
 
-Historia de usuario n° 1
+###Historia de usuario n° 1
 Como usuario de Filmin
 quiero ingresar a la web de Filmin
 para conocer el contenido disponible en la plataforma
@@ -10,7 +10,7 @@ Dado que estoy en la página principal de la aplicación
 cuando cargo la página por primera vez
 entonces veo el contenido ofrecido por la plataforma organizado de distintas maneras.
 
-Historia de usuario n° 2
+###Historia de usuario n° 2
 Como usuaria de Filmin
 quiero ver el contenido organizado en listas
 para elegir entre: "El mejor cine reciente en exclusiva", "Series imprescindibles para todos los gustos", "Las candidatas al Óscar internacional de 2024"
@@ -20,7 +20,17 @@ Dado que quiero acceder a cierto contenido
 cuando estoy en la página principal
 entonces encuentro las listas: "El mejor cine reciente en exclusiva", "Series imprescindibles para todos los gustos", "Las candidatas al Óscar internacional de 2024"
 
-Historia de usuario n° 
+###Historia de usuario n° 3
+Como usuario de Filmin
+quiero un carrusel en la página principal,
+para visualizar películas destacadas de forma atractiva y dinámica.
+
+Test de aceptación
+Dado que hay películas destacadas
+cuando estoy en la página principal 
+entonces recorro un carrusel que me las muestra de manera atractiva y dinámica.
+
+###Historia de usuario n° 
 Como 
 quiero 
 para 
