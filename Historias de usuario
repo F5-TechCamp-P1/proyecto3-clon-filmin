@@ -11,14 +11,14 @@ cuando cargo la página por primera vez
 entonces veo el contenido ofrecido por la plataforma organizado de distintas maneras.
 
 Historia de usuario n° 2
-Como usuaria
-quiero 
-para 
+Como usuaria de Filmin
+quiero ver el contenido organizado en listas
+para elegir entre: "El mejor cine reciente en exclusiva", "Series imprescindibles para todos los gustos", "Las candidatas al Óscar internacional de 2024"
 
 Test de aceptación
-Dado 
-cuando 
-entonces 
+Dado que quiero acceder a cierto contenido
+cuando estoy en la página principal
+entonces encuentro las listas: "El mejor cine reciente en exclusiva", "Series imprescindibles para todos los gustos", "Las candidatas al Óscar internacional de 2024"
 
 Historia de usuario n° 
 Como 
