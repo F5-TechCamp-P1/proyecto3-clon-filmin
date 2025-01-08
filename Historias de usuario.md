@@ -52,10 +52,10 @@ entonces veo las opciones en la parte superior de la misma.
 
 ### Historia de usuario n° 5
 Como usuaria de Filmin
-quiero 
-para 
+quiero ver detalles de una película al pasar el cursor sobre ella,
+para decidir si quiero reproducirla o explorar más información.
 
 Test de aceptación
-Dado 
-cuando 
-entonces 
+Dado que cada película tiene detalles propios
+cuando paso el cursor sobre ella
+entonces los veo y decido si quiero verla.
