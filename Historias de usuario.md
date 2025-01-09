@@ -43,7 +43,7 @@ entonces soy redirigido a los sitios correcpondientes.
 ### Historia de usuario n° 5
 Como usuaria de Filmin
 quiero acceder a contenido específico 
-para no nvagar por toda la página principal.
+para no navegar por toda la página principal.
 
 Test de aceptación
 Dado que hay contengido espcífico
