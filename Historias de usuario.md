@@ -1,14 +1,14 @@
 ## Historias de usuario
 
-### Historia de usuario n° 1
-Como usuario de Filmin
-quiero ingresar a la web de Filmin
-para conocer el contenido disponible en la plataforma
-
-Test de aceptación
-Dado que estoy en la página principal de la aplicación
-cuando cargo la página por primera vez
-entonces veo el contenido ofrecido por la plataforma organizado de distintas maneras.
+>### Historia de usuario n° 1
+>Como usuario de Filmin
+>quiero ingresar a la web de Filmin
+>para conocer el contenido disponible en la plataforma
+>
+>Test de aceptación
+>Dado que estoy en la página principal de la aplicación
+>cuando cargo la página por primera vez
+>entonces veo el contenido ofrecido por la plataforma organizado de distintas maneras.
 
 ### Historia de usuario n° 2
 Como usuaria de Filmin
