@@ -10,15 +10,15 @@
 >cuando cargo la página por primera vez
 >entonces veo el contenido ofrecido por la plataforma organizado de distintas maneras.
 
-### Historia de usuario n° 2
-Como usuaria de Filmin
-quiero ver el contenido organizado en listas
-para elegir entre: "El mejor cine reciente en exclusiva", "Series imprescindibles para todos los gustos", "Las candidatas al Óscar internacional de 2024"
-
-Test de aceptación
-Dado que quiero acceder a cierto contenido
-cuando estoy en la página principal
-entonces encuentro las listas: "El mejor cine reciente en exclusiva", "Series imprescindibles para todos los gustos", "Las candidatas al Óscar internacional de 2024"
+>### Historia de usuario n° 2
+>Como usuaria de Filmin
+>quiero ver el contenido organizado en listas
+>para elegir entre: "El mejor cine reciente en exclusiva", "Series imprescindibles para todos los gustos", "Las candidatas al Óscar >internacional de 2024"
+>
+>Test de aceptación
+>Dado que quiero acceder a cierto contenido
+>cuando estoy en la página principal
+>entonces encuentro las listas: "El mejor cine reciente en exclusiva", "Series imprescindibles para todos los gustos", "Las candidatas al >Óscar internacional de 2024"
 
 ### Historia de usuario n° 3
 Como usuario de Filmin
@@ -50,12 +50,12 @@ entonces recorro un carrusel que me las muestra de manera atractiva y dinámica.
 >cuando estoy en la página principal 
 >entonces veo las opciones en la parte superior de la misma.
 
-### Historia de usuario n° 5
-Como usuaria de Filmin
-quiero ver detalles de una película al pasar el cursor sobre ella,
-para decidir si quiero reproducirla o explorar más información.
-
-Test de aceptación
-Dado que cada película tiene detalles propios
-cuando paso el cursor sobre ella
-entonces los veo y decido si quiero verla.
+>### Historia de usuario n° 5
+>Como usuaria de Filmin
+>quiero ver detalles de una serie al pasar el cursor sobre ella,
+>para decidir si quiero reproducirla o explorar más información.
+>
+>Test de aceptación
+>Dado que cada serie tiene detalles propios
+>cuando paso el cursor sobre ella
+>entonces los veo y decido si quiero verla.
