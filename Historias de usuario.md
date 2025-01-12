@@ -30,25 +30,25 @@ Dado que hay películas destacadas
 cuando estoy en la página principal 
 entonces recorro un carrusel que me las muestra de manera atractiva y dinámica.
 
-### Historia de usuario n° 4
-Como usuario de Filmin
-quiero ver las redes sociales, links de contacto y privadidad 
-para accerder a ellos.
+>### Historia de usuario n° 4
+>Como usuario de Filmin
+>quiero ver las redes sociales, links de contacto y privadidad 
+>para accerder a ellos.
 
-Test de aceptación
-Dado Filmin tiene redes sociales, links de contacto e información de privacidad, 
-cuando hago click en los íconos o links,
-entonces soy redirigido a los sitios correcpondientes.
+>Test de aceptación
+>Dado Filmin tiene redes sociales, links de contacto e información de privacidad, 
+>cuando hago click en los íconos o links,
+>entonces soy redirigido a los sitios correcpondientes.
 
-### Historia de usuario n° 5
-Como usuaria de Filmin
-quiero acceder a contenido específico 
-para no navegar por toda la página principal.
+>### Historia de usuario n° 5
+>Como usuaria de Filmin
+>quiero acceder a contenido específico 
+>para no navegar por toda la página principal.
 
-Test de aceptación
-Dado que hay contengido espcífico
-cuando estoy en la página principal 
-entonces veo las opciones en la parte superior de la misma.
+>Test de aceptación
+>Dado que hay contengido espcífico
+>cuando estoy en la página principal 
+>entonces veo las opciones en la parte superior de la misma.
 
 ### Historia de usuario n° 5
 Como usuaria de Filmin
