@@ -49,11 +49,14 @@ La plataforma incluye:
 
 ### Footer Funcional:
 
-- El footer está presente en todas las páginas de la plataforma.
 - Contiene enlaces a diversas opciones, como:
 
   - Centro de ayuda
-  - Política de privacidad
-  - Términos y condiciones
-  - Redes sociales
+  - Canjear código Regala Filmin 
+  - Aviso Legal
+  - Prensa
+  - ¿Quiénes somos?
+  - Cambiar preferencias de cookies
+ 
+  - Enlaces a diferentes RRSS
 - Es claro, accesible y responsivo, adaptándose a diferentes tamaños de pantalla.
