@@ -52,7 +52,8 @@ La plataforma incluye:
 - Contiene enlaces a diversas opciones, como:
 
   - Centro de ayuda
-  - Canjear código Regala Filmin 
+  - Canjear código
+  - Regala Filmin 
   - Aviso Legal
   - Prensa
   - ¿Quiénes somos?
