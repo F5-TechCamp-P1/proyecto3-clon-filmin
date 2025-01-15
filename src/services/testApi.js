@@ -7,7 +7,7 @@ getHighlightedMovies()
   .catch(error => console.error(error));
   
   getPopularSeries()
-    .then(response => respinse.jason())
+    .then(response => response.jason())
     .then(data => console.log('Series imprescindibles para todos los gustos:', data))
     .catch(error => console.error(error));
     
