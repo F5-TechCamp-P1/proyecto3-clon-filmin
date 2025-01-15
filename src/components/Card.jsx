@@ -1,9 +1,7 @@
-function Card (){
-    const styles = {
-        backGroundImage: URL('enlazar a la api')
-    }
+function Card ({imgUrl}){
     return(
-        <div style={styles}> 
+        <div> 
+            <img src={imgUrl} />
         </div>
     )
 }
