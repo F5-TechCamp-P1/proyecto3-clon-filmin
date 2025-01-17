@@ -1,3 +1,5 @@
+import CardsSection from './CardsSection.jsx'
+
 function List ({listTitle, listType}){
     
     return(

@@ -1,0 +1,10 @@
+function MoreArrowButton ({direction}){
+    const moreArrowImg = ""
+    {direction} == "Previous" ? moreArrowImg = "./assets/completar ruta" : moreArrowImg = "./assets/completar ruta"
+    
+    return (
+    <button><img src={moreArrowImg}></button> 
+    );
+}
+
+export default MoreArrowButton

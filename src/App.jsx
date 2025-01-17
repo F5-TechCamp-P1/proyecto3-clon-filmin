@@ -1,19 +1,28 @@
 import React from 'react';
 import MovieList from './components/MovieList';
 import List from './components/List.jsx'
+import React, {createContext} from 'react'
+import './App.css'
+
+export const ListTypeContext=createContext()
 
 function App() {
   return (
     <div className="App">
       
       <MovieList />
+      <ListTypeContext.Provider value="bestMoviesList">
+        <List listTitle="El mejor cine reciente en exclusiva" />
+      </ListTypeContext.Provider>
       
-    
-  
-      <List listTitle="El mejor cine reciente en exclusiva" listType={bestMoviesList}/>
-      <List listTitle="Series imprescindibles para todos los gustos" listType={seriesList}/>
-      <List listTitle="Las candidatas al Óscar internacional de 2024" listType={oscarMoviesList}/>
-      </div>
+      <ListTypeContext.Provider value="seriesList">
+        <List listTitle="Series imprescindibles para todos los gustos" />
+      </ListTypeContext.Provider>
+      
+      <ListTypeContext.Provider value="oscarMoviesList">
+        <List listTitle="Las candidatas al Óscar internacional de 2024" />
+      </ListTypeContext.Provider>
+    </div>
   )
 }
 
