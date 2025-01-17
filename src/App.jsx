@@ -1,16 +1,18 @@
-import React from 'react';
 import MovieList from './components/MovieList';
-
+import NavBar from './components/NavBar';
+import '../src/index.css'
 
 function App() {
   return (
-    <div className="App">
-      
-      <MovieList />
-      
+    <div>
+      <NavBar />
+      {/* Contenido de la barra de navegación */}
+      <div className="App">
+        <MovieList />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
 
