@@ -8,10 +8,14 @@ function Card ({imgUrl}){
         setHover(true)
     }
 
+    function handleHoverOut (){
+        setHover(false)
+    }
+
     return(
         <>
         <div> 
-            <img src={imgUrl} onMouseEnter={handleHover} />
+            <img src={imgUrl} onMouseEnter={handleHover} onMouseLeave={handleHoverOut}/>
         </div>
         {hover && <CardWithDetails />}
         </>
