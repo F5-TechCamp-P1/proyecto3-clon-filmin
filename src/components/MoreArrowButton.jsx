@@ -1,7 +1,7 @@
 
 function MoreArrowButton ({direction}){
-    const moreArrowImg = ""
-    direction == "Previous" ? moreArrowImg = "https://w7.pngwing.com/pngs/775/103/png-transparent-arrow-computer-icons-right-arrow-angle-hand-desktop-wallpaper.png" : moreArrowImg = "https://cdn-icons-png.flaticon.com/512/3272/3272603.png"
+    let moreArrowImg = ""
+    direction == "Next" ? moreArrowImg = "../assets/arrow-next-small-svgrepo-com.svg" : moreArrowImg = "../assets/arrow-prev-small-svgrepo-com.svg"
     
     return (
     <button><img src={moreArrowImg} /></button> 

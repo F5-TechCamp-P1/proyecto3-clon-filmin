@@ -1,14 +1,12 @@
 import CardsSection from './CardsSection.jsx'
 
 
-function List ({listTitle, listType}){
+function List ({listTitle}){
     
     return(
         <div>
             <h3>{listTitle}</h3>
-            <CardsSection
-                listType={listType}
-            />
+            <CardsSection />
         </div>
     )
 }

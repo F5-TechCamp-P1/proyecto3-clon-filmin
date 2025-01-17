@@ -1,7 +1,10 @@
+import React, {useContext} from 'react'
+import {ListTypeContext} from '../App'
 import Card from '../components/Card'
-//import MoreArrowButton from './MoreArrowButton.jsx'
+import MoreArrowButton from '../components/MoreArrowButton'
 
-function CardsSection({listType}){
+function CardsSection(){
+    let listType = useContext(ListTypeContext)
     let imgUrl
     if (listType === "bestMoviesList") {
         imgUrl = "https://pics.filmaffinity.com/the_substance-153348439-mmed.jpg"
@@ -13,8 +16,8 @@ function CardsSection({listType}){
             <ul>
                 <li><Card imgUrl={imgUrl}/></li>
             </ul>
-            {/* <MoreArrowButton direction="Previous"  />
-            <MoreArrowButton direction="Next" /> */}
+            <MoreArrowButton direction="Previous"  />
+            <MoreArrowButton direction="Next" />
         </div>
     )
 }
