@@ -1,24 +1,27 @@
-import React, {useState} from 'react'
-import CardWithDetails from '../components/CardWithDetails'
+import React, { useState } from 'react';
+import CardWithDetails from '../components/CardWithDetails';
 
-function Card ({imgUrl}){
-    const [hover, setHover] = useState(false)
-    
-    function handleHover (){
-        setHover(true)
-    }
+function Card({ imgUrl, title, description, genres, rating }) {
+  const [hover, setHover] = useState(false);
 
-    function handleHoverOut (){
-        setHover(false)
-    }
+  function handleHover() {
+    setHover(true);
+  }
 
-    return(
-        <>
-        <div> 
-            <img src={imgUrl} onMouseEnter={handleHover} onMouseLeave={handleHoverOut}/>
-        </div>
-        {hover && <CardWithDetails />}
-        </>
-    )
+  function handleHoverOut() {
+    setHover(false);
+  }
+
+  return (
+    <>
+      <div>
+        <img src={imgUrl} alt={title} onMouseEnter={handleHover} onMouseLeave={handleHoverOut} />
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+      {hover && <CardWithDetails title={title} description={description} genres={genres} rating={rating} />}
+    </>
+  );
 }
-export default Card
+
+export default Card;

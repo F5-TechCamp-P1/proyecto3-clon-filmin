@@ -1,13 +1,15 @@
-function CardWithDetails(){
-    return(
-        <div>
-            <video></video>
-            <p>Calificación</p>
-            <h4>titulo</h4>
-            <span>géneros</span>
-            <p>resumen</p>
-        </div>
-    )
-    
+import React from 'react';
+
+function CardWithDetails({ title, description, genres, rating }) {
+  return (
+    <div>
+      <video></video>
+      <p>Calificación: {rating}</p>
+      <h4>{title}</h4>
+      <span>Géneros: {genres.join(', ')}</span>
+      <p>Resumen: {description}</p>
+    </div>
+  );
 }
-export default CardWithDetails
+
+export default CardWithDetails;

@@ -1,25 +1,31 @@
-import React, {useContext} from 'react'
-import {ListTypeContext} from '../App'
-import Card from '../components/Card'
-import MoreArrowButton from '../components/MoreArrowButton'
+import React from 'react';
+import Card from '../components/Card';
+import MoreArrowButton from '../components/MoreArrowButton';
 
-function CardsSection(){
-    let listType = useContext(ListTypeContext)
-    let imgUrl
-    if (listType === "bestMoviesList") {
-        imgUrl = "https://pics.filmaffinity.com/the_substance-153348439-mmed.jpg"
-    }
+function CardsSection({ items }) {
+  if (!items || items.length === 0) {
+    return null;
+  }
 
-    return (
-        <div>
-            {/* Acá vamos a tener que usar un .map para que por cada pelicula se renderice una lista de tarjetas */}
-            <ul>
-                <li><Card imgUrl={imgUrl}/></li>
-            </ul>
-            <MoreArrowButton direction="Previous"  />
-            <MoreArrowButton direction="Next" />
-        </div>
-    )
+  return (
+    <div>
+      <ul>
+        {items.map(item => (
+          <li key={item.id}>
+            <Card
+              imgUrl={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
+              title={item.title || item.name}  
+              description={item.overview}
+              genres={item.genre_ids}  
+              rating={item.vote_average}
+            />
+          </li>
+        ))}
+      </ul>
+      <MoreArrowButton direction="Previous" />
+      <MoreArrowButton direction="Next" />
+    </div>
+  );
 }
 
-export default CardsSection
+export default CardsSection;

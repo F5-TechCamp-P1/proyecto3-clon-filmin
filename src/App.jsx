@@ -1,31 +1,35 @@
-import React from 'react';
-import MovieList from './components/MovieList';
-import React, {createContext} from 'react'
-import List from './components/List.jsx'
-import './App.css'
+import React, { createContext } from 'react';
+import List from './components/List.jsx';
+import {
+  getPopularMovies,
+  getTrendingMovies,
+  getPopularTVShows,
+  getTopRatedMovies
+} from './services/tmdbApi';
+import './App.css';
 
-export const ListTypeContext=createContext()
+export const ListTypeContext = createContext();
 
 function App() {
   return (
     <div className="App">
-      
-      <MovieList />
-    
-      <ListTypeContext.Provider value="bestMoviesList">
-        <List listTitle="El mejor cine reciente en exclusiva" />
+      {/* Carrusel al inicio de la página */}
+      <ListTypeContext.Provider value="popularMoviesList">
+        <List listTitle="Películas Populares" fetchList={getPopularMovies} />
       </ListTypeContext.Provider>
       
+      {/* Cuerpo de la página */}
+      <ListTypeContext.Provider value="trendingMoviesList">
+        <List listTitle="Películas en Tendencia" fetchList={getTrendingMovies} />
+      </ListTypeContext.Provider>
       <ListTypeContext.Provider value="seriesList">
-        <List listTitle="Series imprescindibles para todos los gustos" />
+        <List listTitle="Series imprescindibles para todos los gustos" fetchList={getPopularTVShows} />
       </ListTypeContext.Provider>
-      
-      <ListTypeContext.Provider value="oscarMoviesList">
-        <List listTitle="Las candidatas al Óscar internacional de 2024" />
+      <ListTypeContext.Provider value="topRatedMoviesList">
+        <List listTitle="Películas Mejor Valoradas" fetchList={getTopRatedMovies} />
       </ListTypeContext.Provider>
     </div>
-  )
+  );
 }
 
 export default App;
-

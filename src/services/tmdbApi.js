@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //Configuracion base para no repetir la URL y el API_KEY
-const API_KEY = ''; //Aqui va la API_KEY 35412b192aeb6630f8dc3e53d088358a
+const API_KEY = ''; // Aquí va tu API_KEY 35412b192aeb6630f8dc3e53d088358a
 const BASE_URL = 'https://api.themoviedb.org/3'; // La URL base para todas las solicitudes API
 
 // Crear una instancia de Axios con la configuración base
@@ -9,35 +9,33 @@ const tmdbApi = axios.create({
   baseURL: BASE_URL,
   params: {
     api_key: API_KEY,
-    language: 'es-ES',//Permite recibir la información en español
+    language: 'es-ES', // Permite recibir la información en español
   }
 });
 
-// La función getPopularMovies() devuelve las peliculas más populares de la semana lista: Carrousel
+// La función getPopularMovies() devuelve las películas más populares para mostrar en el carrusel
 export const getPopularMovies = async () => {
   const response = await tmdbApi.get('/movie/popular');
-  return response.data.results;
+  return response.data.results.slice(0, 10); 
 };
 
-// La funcion getOscarNominatedMovies() devuelve las peliculas que ganaron el Oscar en 2023 lista: "Candidatas al Óscar internacional"
-export const getOscarNominatedMovies = async () => { 
-  const response = await tmdbApi.get('/movie/top_rated'); 
-  return response.data.results;
+// La función getTrendingMovies() devuelve las películas en tendencia
+export const getTrendingMovies = async (timeWindow = 'week') => {
+  const response = await tmdbApi.get(`/trending/movie/${timeWindow}`);
+  return response.data.results.slice(0, 10); 
 };
 
-// La función getPopularSeries() devuelve las series más populares lista: "Series imprescindibles para todos los gustos"
+// La función getTopRatedMovies() devuelve las películas mejor valoradas
+export const getTopRatedMovies = async () => {
+  const response = await tmdbApi.get('/movie/top_rated');
+  return response.data.results.slice(0, 10); 
+};
+
+// La función getPopularTVShows() devuelve las series más populares
 export const getPopularTVShows = async () => {
   const response = await tmdbApi.get('/tv/popular');
-  return response.data.results;
+  return response.data.results.slice(0, 10); 
 };
 
-// La función getRecentBestMovies() devuelve las películas lista: "El mejor cine reciente en exclusiva"
-export const getRecentExclusiveMovies = async () => { 
-  const response = await tmdbApi.get('/movie/now_playing'); 
-  return response.data.results; 
-};
-// Exportar la instancia de Axios para posibles usos adicionales
+
 export default tmdbApi;
-
-
-
