@@ -1,4 +1,3 @@
-import React from 'react';
 import MovieList from './components/MovieList';
 import React, {createContext} from 'react'
 import List from './components/List.jsx'
@@ -10,7 +9,7 @@ function App() {
   return (
     <div className="App">
       
-      <MovieList />
+      {/* <MovieList /> */}
     
       <ListTypeContext.Provider value="bestMoviesList">
         <List listTitle="El mejor cine reciente en exclusiva" />
