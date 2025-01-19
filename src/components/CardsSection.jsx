@@ -28,9 +28,9 @@ function CardsSection(){
 
     return (
         <div>
-            <ul>
+            <ul className="flex space-x-4 list-none">
             {movies.map(movie => (
-                <li key={movie.id} className="list-none"><Card imgUrl={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}/></li>
+                <li key={movie.id}><Card imgUrl={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}/></li>
             ))}
             </ul>
             <MoreArrowButton direction="Previous"  />
