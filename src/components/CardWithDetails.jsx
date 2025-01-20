@@ -3,7 +3,6 @@ import React from 'react';
 function CardWithDetails({ title, description, genres, rating }) {
   return (
     <div>
-      <video></video>
       <p>Calificación: {rating}</p>
       <h4>{title}</h4>
       <span>Géneros: {genres.join(', ')}</span>

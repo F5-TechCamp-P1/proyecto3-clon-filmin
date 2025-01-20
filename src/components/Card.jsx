@@ -13,14 +13,12 @@ function Card({ imgUrl, title, description, genres, rating }) {
   }
 
   return (
-    <>
-      <div>
-        <img src={imgUrl} alt={title} onMouseEnter={handleHover} onMouseLeave={handleHoverOut} />
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
+    <div onMouseEnter={handleHover} onMouseLeave={handleHoverOut}>
+      <img src={imgUrl} alt={title} />
+      <h3>{title}</h3>
+      <p>{description}</p>
       {hover && <CardWithDetails title={title} description={description} genres={genres} rating={rating} />}
-    </>
+    </div>
   );
 }
 
