@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //Configuracion base para no repetir la URL y el API_KEY
-const API_KEY = ''; //Aqui va la API_KEY 35412b192aeb6630f8dc3e53d088358a
+const API_KEY = '35412b192aeb6630f8dc3e53d088358a'; //Aqui va la API_KEY 35412b192aeb6630f8dc3e53d088358a
 const BASE_URL = 'https://api.themoviedb.org/3'; // La URL base para todas las solicitudes API
 
 // Crear una instancia de Axios con la configuración base
