@@ -5,7 +5,7 @@ function List ({listTitle}){
     
     return(
         <div>
-            <h3>{listTitle}</h3>
+            <h2>{listTitle}</h2>
             <CardsSection />
         </div>
     )

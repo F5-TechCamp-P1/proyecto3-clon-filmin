@@ -1,8 +1,10 @@
 import {ListTypeContext} from '../App'
 import Card from '../components/Card'
 import MoreArrowButton from '../components/MoreArrowButton'
-import React, { useEffect, useState, useContext} from 'react';
+import React, { useEffect, useState, useContext, createContext} from 'react';
 import { getRecentExclusiveMovies, getPopularTVShows, getOscarNominatedMovies} from '../services/tmdbApi';
+
+export const MovieInfo = createContext();
 
 
 function CardsSection(){
@@ -23,14 +25,17 @@ function CardsSection(){
         }; 
         fetchMovies(); 
     }, []);
-        //imgUrl = "https://pics.filmaffinity.com/the_substance-153348439-mmed.jpg"
-
 
     return (
         <div>
-            <ul className="flex space-x-4 list-none">
+            <ul className="flex">
             {movies.map(movie => (
-                <li key={movie.id}><Card imgUrl={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}/></li>
+                <MovieInfo.Provider value={movie.title} key={movie.id}>
+                    <li>
+                        <Card imgUrl={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}/>
+                        {console.log('in card section', movie.title)}
+                    </li>    
+                </MovieInfo.Provider>
             ))}
             </ul>
             <MoreArrowButton direction="Previous"  />

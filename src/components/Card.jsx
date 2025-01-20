@@ -1,9 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import CardWithDetails from '../components/CardWithDetails'
+import { ListTypeContext } from '../App'
 
 function Card ({imgUrl}){
+    let listType = useContext(ListTypeContext)
+    
     const [hover, setHover] = useState(false)
     
+
     function handleHover (){
         setHover(true)
     }
@@ -17,7 +21,10 @@ function Card ({imgUrl}){
         <div> 
             <img src={imgUrl} onMouseEnter={handleHover} onMouseLeave={handleHoverOut}/>
         </div>
-        {hover && <CardWithDetails />}
+        {hover && listType === "seriesList" && ( 
+            <div> 
+            <CardWithDetails /> 
+            </div> )}
         </>
     )
 }

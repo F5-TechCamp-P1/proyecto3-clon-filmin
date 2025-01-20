@@ -1,4 +1,4 @@
-import MovieList from './components/MovieList';
+//import MovieList from './components/MovieList';
 import React, {createContext} from 'react'
 import List from './components/List.jsx'
 import './App.css'
