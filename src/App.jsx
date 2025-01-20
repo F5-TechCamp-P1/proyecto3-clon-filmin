@@ -10,8 +10,8 @@ function App() {
     <div>
         <NavBar />
         {/* Contenido de la barra de navegación */}
-      <div className="App"
-        <MovieList />
+      <div className="App">
+        <MovieList/>
       </div>
       <div>    
         <CarruselReactResponsive />
