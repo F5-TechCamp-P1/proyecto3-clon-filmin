@@ -3,7 +3,7 @@ import CarruselReactResponsive from "./components/Carousel/carousel";
 import MovieList from './components/MovieList';
 import NavBar from './components/NavBar';
 import '../src/index.css'
-
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +15,9 @@ function App() {
       </div>
       <div>    
         <CarruselReactResponsive />
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );
