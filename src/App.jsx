@@ -1,4 +1,8 @@
 import React, { createContext } from 'react';
+import CarruselReactResponsive from "./components/Carousel/carousel";
+import NavBar from './components/NavBar';
+import '../src/index.css'
+import Footer from "./components/Footer";
 import List from './components/List.jsx';
 import {
   getPopularMovies,
@@ -13,12 +17,16 @@ export const ListTypeContext = createContext();
 function App() {
   return (
     <div className="App">
-      {/* Carrusel al inicio de la página */}
+         <NavBar />
+         <div>    
+          <CarruselReactResponsive />
+          </div>
+      
       <ListTypeContext.Provider value="popularMoviesList">
         <List listTitle="Películas Populares" fetchList={getPopularMovies} />
       </ListTypeContext.Provider>
       
-      {/* Cuerpo de la página */}
+     
       <ListTypeContext.Provider value="trendingMoviesList">
         <List listTitle="Películas en Tendencia" fetchList={getTrendingMovies} />
       </ListTypeContext.Provider>
@@ -28,8 +36,12 @@ function App() {
       <ListTypeContext.Provider value="topRatedMoviesList">
         <List listTitle="Películas Mejor Valoradas" fetchList={getTopRatedMovies} />
       </ListTypeContext.Provider>
+          <div>
+        <Footer/>
+      </div>
     </div>
   );
 }
 
 export default App;
+
