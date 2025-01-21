@@ -1,25 +1,31 @@
-import React, { useState } from 'react';
-import CardWithDetails from '../components/CardWithDetails';
+import React, {useState, useContext} from 'react'
+import CardWithDetails from '../components/CardWithDetails'
+import { ListTypeContext } from '../App'
 
-function Card({ imgUrl, title, description, genres, rating }) {
-  const [hover, setHover] = useState(false);
+function Card ({imgUrl}){
+    let listType = useContext(ListTypeContext)
+    
+    const [hover, setHover] = useState(false)
+    
 
-  function handleHover() {
-    setHover(true);
-  }
+    function handleHover (){
+        setHover(true)
+    }
 
-  function handleHoverOut() {
-    setHover(false);
-  }
+    function handleHoverOut (){
+        setHover(false)
+    }
 
-  return (
-    <div onMouseEnter={handleHover} onMouseLeave={handleHoverOut}>
-      <img src={imgUrl} alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-      {hover && <CardWithDetails title={title} description={description} genres={genres} rating={rating} />}
-    </div>
-  );
+    return(
+        <>
+        <div> 
+            <img src={imgUrl} onMouseEnter={handleHover} onMouseLeave={handleHoverOut} alt={title}/>
+        </div>
+        {hover && listType === "seriesList" && ( 
+            <div> 
+             <CardWithDetails title={title} description={description} genres={genres} rating={rating} />} /> 
+            </div> )}
+        </>
+    )
 }
-
-export default Card;
+export default Card
