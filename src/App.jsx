@@ -12,21 +12,22 @@ import {
 } from './services/tmdbApi';
 import './App.css';
 
+
 export const ListTypeContext = createContext();
 
 function App() {
   return (
     <div className="App">
          <NavBar />
-         <div>    
+         <div>
           <CarruselReactResponsive />
           </div>
-      
+
       <ListTypeContext.Provider value="popularMoviesList">
         <List listTitle="Películas Populares" fetchList={getPopularMovies} />
       </ListTypeContext.Provider>
-      
-     
+
+
       <ListTypeContext.Provider value="trendingMoviesList">
         <List listTitle="Películas en Tendencia" fetchList={getTrendingMovies} />
       </ListTypeContext.Provider>
