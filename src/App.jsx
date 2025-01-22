@@ -16,6 +16,7 @@ export const ListTypeContext = createContext();
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
 
       <NavBar />
       <div>
@@ -35,8 +36,33 @@ function App() {
       <div>
         <Footer/>
       </div>
+=======
+      <NavBar />
+      <div>    
+        <MoviesCarousel />
+      </div>
+
+           
+      <ListTypeContext.Provider value="trendingMoviesList">
+        <List listTitle="Películas en Tendencia" fetchList={getTrendingMovies} />
+      </ListTypeContext.Provider>
+      
+      <ListTypeContext.Provider value="seriesList">
+        <List listTitle="Series imprescindibles para todos los gustos" fetchList={getPopularTVShows} />
+      </ListTypeContext.Provider>
+      
+      <ListTypeContext.Provider value="topRatedMoviesList">
+        <List listTitle="Películas Mejor Valoradas" fetchList={getTopRatedMovies} />
+      </ListTypeContext.Provider>
+
+      <Footer/>
+>>>>>>> 9a197fd (Add connection Corousel and Api)
     </div>
   );
 }
 
+<<<<<<< HEAD
 export default App;
+=======
+export default App;
+>>>>>>> 9a197fd (Add connection Corousel and Api)
