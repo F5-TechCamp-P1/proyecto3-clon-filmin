@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 
-const API_KEY = ''; //Aqui va la API_KEY 35412b192aeb6630f8dc3e53d088358a
+const API_KEY = '35412b192aeb6630f8dc3e53d088358a'; //Aqui va la API_KEY 35412b192aeb6630f8dc3e53d088358a
 const BASE_URL = 'https://api.themoviedb.org/3'; 
 
 
@@ -38,5 +38,10 @@ export const getPopularTVShows = async () => {
   return response.data.results.slice(0, 10); 
 };
 
+export const getMovieTrailer = async (movieId) => {
+  const response = await tmdbApi.get(`/movie/${movieId}/videos`);
+  const trailer = response.data.results.find(video => video.type === 'Trailer' && video.site === 'YouTube');
+  return trailer ? trailer.key : null;
+};
 
 export default tmdbApi;
