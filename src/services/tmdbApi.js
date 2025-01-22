@@ -10,22 +10,18 @@ const tmdbApi = axios.create({
     language: 'es-ES',
   }
 });
-
 export const getPopularMovies = async () => {
   const response = await tmdbApi.get('/movie/popular');
   return response.data.results.slice(0, 10);
 };
-
 export const getTrendingMovies = async (timeWindow = 'week') => {
   const response = await tmdbApi.get(`/trending/movie/${timeWindow}`);
   return response.data.results.slice(0, 10);
 };
-
 export const getTopRatedMovies = async () => {
   const response = await tmdbApi.get('/movie/top_rated');
   return response.data.results.slice(0, 10);
 };
-
 export const getPopularTVShows = async () => {
   const response = await tmdbApi.get('/tv/popular');
   return response.data.results.slice(0, 10);
