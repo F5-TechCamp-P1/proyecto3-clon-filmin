@@ -1,26 +1,47 @@
-import React from "react";
+import React, { createContext } from 'react';
 import CarruselReactResponsive from "./components/Carousel/carousel";
-import MovieList from './components/MovieList';
 import NavBar from './components/NavBar';
 import '../src/index.css'
 import Footer from "./components/Footer";
+import List from './components/List.jsx';
+import {
+  getPopularMovies,
+  getTrendingMovies,
+  getPopularTVShows,
+  getTopRatedMovies
+} from './services/tmdbApi';
+import './App.css';
+
+export const ListTypeContext = createContext();
 
 function App() {
   return (
-    <div>
-        <NavBar />
-        {/* Contenido de la barra de navegación */}
-      <div className="App">
-        <MovieList/>
-      </div>
-      <div>    
-        <CarruselReactResponsive />
-      </div>
-      <div>
+    <div className="App">
+         <NavBar />
+         <div>    
+          <CarruselReactResponsive />
+          </div>
+      
+      <ListTypeContext.Provider value="popularMoviesList">
+        <List listTitle="Películas Populares" fetchList={getPopularMovies} />
+      </ListTypeContext.Provider>
+      
+     
+      <ListTypeContext.Provider value="trendingMoviesList">
+        <List listTitle="Películas en Tendencia" fetchList={getTrendingMovies} />
+      </ListTypeContext.Provider>
+      <ListTypeContext.Provider value="seriesList">
+        <List listTitle="Series imprescindibles para todos los gustos" fetchList={getPopularTVShows} />
+      </ListTypeContext.Provider>
+      <ListTypeContext.Provider value="topRatedMoviesList">
+        <List listTitle="Películas Mejor Valoradas" fetchList={getTopRatedMovies} />
+      </ListTypeContext.Provider>
+          <div>
         <Footer/>
       </div>
     </div>
   );
-};
+}
 
 export default App;
+
