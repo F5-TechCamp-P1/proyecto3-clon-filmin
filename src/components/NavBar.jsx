@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 
-const NavBar = () => {
+const NavBar = ({ lists }) => {
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const handleScrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setMenuOpen(false);  // Cerrar el menú después de hacer clic
+        }
+    };
 
     return (
         <nav className="bg-black text-white px-4 py-3 flex items-center justify-between">
@@ -15,7 +23,7 @@ const NavBar = () => {
             </a>
 
             {/* Menu */}
-            <div className="relative">
+            <div className="relative z-50">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="text-white focus:outline-none active:text-teal-400 font-bold mr-4"
@@ -26,15 +34,11 @@ const NavBar = () => {
               {menuOpen && (
                 <div className="absolute right-0 w-max mt-2 bg-gray-900 text-white font-bold rounded shadow-lg">
                     <ul>
-                        <li className="px-12 py-4 hover:bg-gray-800 cursor-pointer">
-                            El mejor cine reciente en exclusiva
+                      {lists.map(list => (
+                        <li key={list.id} className="px-12 py-4 hover:bg-gray-800 cursor-pointer" onClick={() => handleScrollToSection(list.id)}>
+                          {list.title}
                         </li>
-                        <li className="px-12 py-4 hover:bg-gray-800 cursor-pointer">
-                            Series imprescindibles para todos los gustos
-                        </li>
-                        <li className="px-12 py-4 hover:bg-gray-800 cursor-pointer">
-                            Las candidatas al Óscar internacional de 2024
-                        </li>
+                      ))}
                     </ul>
                </div>
              )}
@@ -43,4 +47,4 @@ const NavBar = () => {
        );
      };
 
-     export default NavBar;
+export default NavBar;
