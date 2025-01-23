@@ -17,14 +17,14 @@ function Card ({ imgUrl, title, description, genres, rating }) {
 
     return (
         <>
-            <div> 
-                <img src={imgUrl} onMouseEnter={handleHover} onMouseLeave={handleHoverOut} alt={title} />
-            </div>
+            <div className="m-2 relative"> 
+                <img src={imgUrl} onMouseEnter={handleHover} onMouseLeave={handleHoverOut} alt={title} className="rounded hover:border hover:border-gray-500"/>
             {hover && listType === "seriesList" && ( 
-                <div> 
+                <div className="z-10 absolute inset-0 flex items-center justify-center"> 
                     <CardWithDetails title={title} description={description} genres={genres} rating={rating} /> 
                 </div> 
             )}
+            </div>
         </>
     );
 }
