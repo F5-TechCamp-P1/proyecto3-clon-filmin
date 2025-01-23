@@ -16,12 +16,11 @@ export const ListTypeContext = createContext();
 function App() {
   return (
     <div className="App">
+
       <NavBar />
       <div>    
         <MoviesCarousel />
       </div>
-
-           
       <ListTypeContext.Provider value="trendingMoviesList">
         <List listTitle="Películas en Tendencia" fetchList={getTrendingMovies} />
       </ListTypeContext.Provider>
@@ -33,8 +32,9 @@ function App() {
       <ListTypeContext.Provider value="topRatedMoviesList">
         <List listTitle="Películas Mejor Valoradas" fetchList={getTopRatedMovies} />
       </ListTypeContext.Provider>
-
-      <Footer/>
+      <div>
+        <Footer/>
+      </div>    
     </div>
   );
 }
