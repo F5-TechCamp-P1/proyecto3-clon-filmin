@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getPopularMovies } from '../services/tmdbApi';
-import CardsSection from './CardsSection'; 
+import CarouselReactResponsive from './Carousel/carousel';
 
-const MovieList = () => {
+const MoviesCarousel = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -15,9 +15,10 @@ const MovieList = () => {
 
   return (
     <div>
-      <CardsSection movies={movies} />
+      <CarouselReactResponsive items={movies} />
     </div>
   );
 };
 
-export default MovieList;
+export default MoviesCarousel;
+
