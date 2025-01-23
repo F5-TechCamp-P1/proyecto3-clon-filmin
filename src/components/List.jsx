@@ -15,7 +15,7 @@ function List({ listTitle, fetchList }) {
   return (
     <div className="flex flex-col justify-center items-center w-full">
       <div className="justify-self-start self-start">
-        <h1 className="font-bold Graphik Medium text-white ml-3 ">{listTitle}</h1>
+        <h1 className="font-bold Graphik Medium text-white ml-8 text-2xl">{listTitle}</h1>
       </div>
       <div className="w-full p-7">
         <CardsSection items={items} />
