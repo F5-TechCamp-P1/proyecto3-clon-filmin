@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  background-image: linear-gradient(rgb(3, 3, 3), rgba(0, 0, 0, 0.863));
+  width: 100%;
 }

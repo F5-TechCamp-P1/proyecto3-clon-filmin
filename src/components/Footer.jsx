@@ -6,11 +6,10 @@ function Footer () {
 
 
     return (
-        <>
-        
+   
         <footer className="bg-black px-4 py-3 flex items-center justify-between size">
             <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-            <span className="text-sm text-white font-bold rounded shadow-lg">© 2025 <a href="http://localhost:5173/" className="hover:underline"> PYMAR™</a>. All Rights Reserved.
+            <span className="text-sm text-white font-bold rounded shadow-lg">© 2025 <a href="https://github.com/F5-TechCamp-P1/proyecto3-clon-filmin" className="hover:underline"> PYMAR™</a>. All Rights Reserved.
             </span>
                 <ul className="flex flex-wrap items-center mt-3 font-medium text-white font-bold rounded shadow-lg">
                     <li><a href="https://github.com/PFBregon">
@@ -41,8 +40,6 @@ function Footer () {
                 </ul>
             </div>
         </footer>
-
-        </>
 
         
     )
