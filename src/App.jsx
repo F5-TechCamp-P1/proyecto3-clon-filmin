@@ -1,11 +1,11 @@
 import React, { createContext } from 'react';
 import NavBar from './components/NavBar';
-import './index.css';
 import Footer from "./components/Footer";
 import List from './components/List.jsx';
-import MoviesCarousel from './components/MoviesCarousel.jsx';
+import CarouselReactResponsive from './components/Carousel/Carousel.jsx';
 import lists from './components/list/listConfig.jsx';
 import './App.css';
+import './index.css';
 
 export const ListTypeContext = createContext();
 
@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <NavBar lists={lists} />
       <div>
-        <MoviesCarousel />
+        <CarouselReactResponsive />
       </div>
 
       {lists.map((list) => (
@@ -31,3 +31,5 @@ function App() {
 }
 
 export default App;
+
+
