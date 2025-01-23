@@ -17,8 +17,8 @@ function Card ({ imgUrl, title, description, genres, rating }) {
 
     return (
         <>
-            <div className="m-1"> 
-                <img src={imgUrl} onMouseEnter={handleHover} onMouseLeave={handleHoverOut} alt={title} className="rounded transition-transform transform hover:scale-105 duration-300"/>
+            <div className="m-2"> 
+                <img src={imgUrl} onMouseEnter={handleHover} onMouseLeave={handleHoverOut} alt={title} className="rounded hover:border hover:border-gray-500"/>
             </div>
             {hover && listType === "seriesList" && ( 
                 <div> 
