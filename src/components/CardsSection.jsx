@@ -20,7 +20,7 @@ function CardsSection({ items }){
   return (
       <Slider {...settings}>
         {items.map(item => (
-          <div key={item.id}>
+          <div key={item.id} className="m-3 relative transition-transform transform hover:scale-105 duration-300 hover:z-10">
             <Card
               imgUrl={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
               title={item.title || item.name}
