@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import Card from '../components/Card';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import MoreArrowButton from '../components/MoreArrowButton';
 
 function CardsSection({ items }){
   var settings = {
@@ -35,4 +34,4 @@ function CardsSection({ items }){
     );
 }
 
-export default CardsSection;
+export default CardsSection
