@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <NavBar lists={lists} />
       <div>
-        <CarouselReactResponsive />
+      <CarouselReactResponsive />
       </div>
 
       {lists.map((list) => (
@@ -31,5 +31,3 @@ function App() {
 }
 
 export default App;
-
-

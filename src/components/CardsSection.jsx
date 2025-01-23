@@ -27,7 +27,7 @@ function CardsSection({ items }){
               description={item.overview}
               genres={item.genre_ids}
               rating={item.vote_average}
-              />
+            />
           </div>
         ))}
       </Slider>

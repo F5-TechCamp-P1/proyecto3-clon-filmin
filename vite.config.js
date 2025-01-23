@@ -6,6 +6,7 @@ import autoprefixer from 'autoprefixer';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: 'https://f5-techcamp-p1.github.io/proyecto3-clon-filmin',
   css: {
     postcss: {
       plugins: [
