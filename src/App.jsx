@@ -2,7 +2,7 @@ import React, { createContext } from 'react';
 import NavBar from './components/NavBar';
 import Footer from "./components/Footer";
 import List from './components/List.jsx';
-import CarouselReactResponsive from './components/Carousel/Carousel.jsx';
+import CarouselReactResponsive from './components/Carousel/carousel.jsx';
 import lists from './components/list/listConfig.jsx';
 import './App.css';
 import './index.css';
