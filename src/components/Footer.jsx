@@ -1,23 +1,45 @@
+import React from 'react';
+import { PiCatBold } from "react-icons/pi";
+
+
 function Footer () {
 
 
     return (
-        <>
-        
-        <footer className="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+   
+        <footer className="bg-black px-4 py-3 flex items-center justify-between size">
             <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+            <span className="text-sm text-white font-bold rounded shadow-lg">© 2025 <a href="https://github.com/F5-TechCamp-P1/proyecto3-clon-filmin" className="hover:underline"> PYMAR™</a>. All Rights Reserved.
             </span>
-                <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-                    <li><a href="#" className="hover:underline me-4 md:me-6">About</a></li>
-                    <li><a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a></li>
-                    <li><a href="#" className="hover:underline me-4 md:me-6">Licensing</a></li>
-                    <li><a href="#" className="hover:underline">Contact</a></li>
+                <ul className="flex flex-wrap items-center mt-3 font-medium text-white font-bold rounded shadow-lg">
+                    <li><a href="https://github.com/PFBregon">
+                    <div className='cat-icon text-2xl hover:underline me-4 md:me-6'> 
+                        <PiCatBold />
+                    </div></a></li>
+                    <li><a href="https://github.com/YefGav">
+                        <div className='cat-icon text-2xl  hover:underline me-4 md:me-6'> 
+                        <PiCatBold />
+                    </div></a></li>
+
+                    <li><a href="https://github.com/MabelRincon">
+                        <div className='cat-icon text-2xl  hover:underline me-4 md:me-6'>
+                        <PiCatBold />
+                    </div></a></li>
+
+                    <li><a href="https://github.com/Ayuik">
+                        <div className='cat-icon text-2xl hover:underline me-4 md:me-6'>
+                        <PiCatBold />
+                    </div></a></li>
+
+                    <li><a href="https://github.com/Angelica-2025">
+                        <div className='cat-icon text-2xl hover:underline me-4 md:me-6 color-'>
+                        <PiCatBold />
+                    
+                    </div></a></li>
+                    
                 </ul>
             </div>
         </footer>
-
-        </>
 
         
     )
@@ -25,3 +47,4 @@ function Footer () {
 }
 
 export default Footer
+
