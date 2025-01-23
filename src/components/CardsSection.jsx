@@ -1,17 +1,27 @@
 import React from 'react';
+import Slider from "react-slick";
 import Card from '../components/Card';
-import MoreArrowButton from '../components/MoreArrowButton';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+// import MoreArrowButton from '../components/MoreArrowButton';
 
-function CardsSection({ items }) {
+function CardsSection({ items }){
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 3,
+  };
+
   if (!items || items.length === 0) {
     return null;
   }
 
   return (
-    <div>
-      <ul>
+      <Slider {...settings}>
         {items.map(item => (
-          <li key={item.id}>
+          <div key={item.id}>
             <Card
               imgUrl={`https://image.tmdb.org/t/p/w300${item.poster_path}`}
               title={item.title || item.name}
@@ -19,13 +29,10 @@ function CardsSection({ items }) {
               genres={item.genre_ids}
               rating={item.vote_average}
             />
-          </li>
+          </div>
         ))}
-      </ul>
-      <MoreArrowButton direction="Previous" />
-      <MoreArrowButton direction="Next" />
-    </div>
-  );
+      </Slider>
+    );
 }
 
 export default CardsSection;

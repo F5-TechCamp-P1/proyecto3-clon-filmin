@@ -21,12 +21,10 @@ function App() {
          <div>    
           <CarruselReactResponsive />
           </div>
-      
+      <div>
       <ListTypeContext.Provider value="popularMoviesList">
         <List listTitle="Películas Populares" fetchList={getPopularMovies} />
       </ListTypeContext.Provider>
-      
-     
       <ListTypeContext.Provider value="trendingMoviesList">
         <List listTitle="Películas en Tendencia" fetchList={getTrendingMovies} />
       </ListTypeContext.Provider>
@@ -36,6 +34,7 @@ function App() {
       <ListTypeContext.Provider value="topRatedMoviesList">
         <List listTitle="Películas Mejor Valoradas" fetchList={getTopRatedMovies} />
       </ListTypeContext.Provider>
+      </div>
           <div>
         <Footer/>
       </div>
