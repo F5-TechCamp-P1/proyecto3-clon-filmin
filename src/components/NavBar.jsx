@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-
+import { useState } from 'react';
+import PropTypes from "prop-types";
 const NavBar = ({ lists }) => {
     const [menuOpen, setMenuOpen] = useState(false);
-
     const handleScrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
-            setMenuOpen(false);  // Cerrar el menú después de hacer clic
+            setMenuOpen(false);
         }
     };
 
@@ -26,9 +25,14 @@ const NavBar = ({ lists }) => {
             <div className="relative z-50">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="text-white focus:outline-none active:text-teal-400 font-bold mr-4"
+                className="text-white focus:outline-none active:text-teal-400 font-bold mr-4 flex items-center"
               >
                 Más
+                <img
+                        src="../src/assets/chevron-down-30.png"
+                        alt="Toggle Menu"
+                        className={`ml-2 transform ${menuOpen ? 'rotate-180' : ''} transition-transform w-3 h-3`}
+                    />
               </button>
 
               {menuOpen && (
@@ -46,5 +50,14 @@ const NavBar = ({ lists }) => {
          </nav>
        );
      };
+
+NavBar.propTypes = {
+  lists: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired
+    })
+  ).isRequired
+ };
 
 export default NavBar;
