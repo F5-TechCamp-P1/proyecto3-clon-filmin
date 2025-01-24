@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getPopularMovies } from '../../services/tmdbApi'; 
-
+import { getPopularMovies } from '../../services/tmdbApi';
 const useFetchMovies = () => {
   const [movies, setMovies] = useState([]);
 
