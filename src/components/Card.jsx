@@ -15,7 +15,9 @@ function Card ({ imgUrl, title, description, genres, rating }) {
   }
 
   return (
+
     <div className="m-2 relative"
+
       onMouseEnter={handleHover} 
       onMouseLeave={handleHoverOut}
     >
