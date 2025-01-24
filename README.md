@@ -56,7 +56,7 @@ La plataforma incluye:
 HTML5, CSS3, JavaScript, React, Tailwind.
 
 ### Instalaciones:
-- React: npm create vite@latest
+- React: ```npm create vite@latest```
 - Tailwind: npm install tailwindcss @tailwindcss/vite
 - Librería React Slick implementada en las categorías: npm install react-slick --save
 - Librería React Responsive Carousel implementada en el carousel: npm i react-responsive-carousel
