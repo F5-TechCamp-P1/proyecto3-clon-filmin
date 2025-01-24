@@ -13,7 +13,7 @@ La plataforma incluye:
 1. Una **barra de navegación** con botones.
 2. Un **carrusel interactivo** de contenidos destacados
 3. Una organización clara de los **contenidos en categorías**.
-4. Además, se incorpora un **footer responsivo** que incluiye enlaces a **redes sociales** y logos de **entidades colaboradoras**. 
+4. Además, se incorpora un **footer responsivo** que incluiye enlaces.
 
 
 ## Detalles de las funcionalidades:
@@ -26,8 +26,7 @@ La plataforma incluye:
 
   * **Logo de Filmin** (clickable y redirige a la página principal).
 
-  * **Enlaces**: "Inicio", "Cine", "Series", "Colecciones", "Festivales", "Más". **Nota:** Estos enlaces no tienen funcionalidad en esta versión, salvo el botón de "Inicio", que es clickable y redirige al usuario a la página principal.
-  * Todos ellos deben son visibles en la interfaz.
+  * **Boton "Más"** que despliega un menú con las listas disponibles para que, al clickear en alguna de ellas, se acceda rápidamente a la misma sin necesidad de scollear por toda la página principal.
 
   * El diseño debe es responsivo, adaptándose correctamente a dispositivos móviles, tabletas y escritorios.
 
@@ -40,24 +39,14 @@ La plataforma incluye:
 ### Organización de Contenidos por Categorías:
 
 - Los contenidos están organizados en **categorías**, tales como:
-  - "El mejor **cine** reciente en exclusiva"
-  - "**Series** imprescindibles para todos los gustos"
-  - "Las candidatas al **Óscar** internacional de 2024"
+  - "Películas en tendencia"
+  - "Series imprescindibles para todos los gustos"
+  - "Películas mejor valoradas"
 - Las categorías son fácilmente accesibles desde la página principal.
   
   
 
 ### Footer Funcional:
 
-- Contiene enlaces a diversas opciones, como:
-
-  - Centro de ayuda
-  - Canjear código
-  - Regala Filmin 
-  - Aviso Legal
-  - Prensa
-  - ¿Quiénes somos?
-  - Cambiar preferencias de cookies
- 
-  - Enlaces a diferentes RRSS
+- Contiene enlaces al **repositorio de GitHub** de este proyecto e íconos que enlazan a los **perfiles de GitHub** de las personas que trabajaron en el desarrollo. 
 - Es claro, accesible y responsivo, adaptándose a diferentes tamaños de pantalla.
