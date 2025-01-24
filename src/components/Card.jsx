@@ -3,30 +3,37 @@ import CardWithDetails from '../components/CardWithDetails';
 import { ListTypeContext } from '../App';
 
 function Card ({ imgUrl, title, description, genres, rating }) {
-    let listType = useContext(ListTypeContext);
-    
-    const [hover, setHover] = useState(false);
-    
-    function handleHover() {
-        setHover(true);
-    }
+  const listType = useContext(ListTypeContext);
+  const [hover, setHover] = useState(false);
 
-    function handleHoverOut() {
-        setHover(false);
-    }
+  function handleHover() {
+    setHover(true);
+  }
 
-    return (
-        <>
-            <div className="m-2 relative"> 
-                <img src={imgUrl} onMouseEnter={handleHover} onMouseLeave={handleHoverOut} alt={title} className="rounded hover:border hover:border-gray-500"/>
-            {hover && listType === "seriesList" && ( 
-                <div className="z-10 absolute inset-0 flex items-center justify-center"> 
-                    <CardWithDetails title={title} description={description} genres={genres} rating={rating} /> 
-                </div> 
-            )}
-            </div>
-        </>
-    );
+  function handleHoverOut() {
+    setHover(false);
+  }
+
+  return (
+    <div 
+      className="m-2 relative"
+      onMouseEnter={handleHover} 
+      onMouseLeave={handleHoverOut}
+    >
+      <img 
+        src={imgUrl} 
+        alt={title} 
+        className="rounded hover:border hover:border-gray-500"
+      />
+      {hover && listType === "seriesList" && (
+        <div 
+          className={`z-10 absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${hover ? 'opacity-100' : 'opacity-0'}`}
+        > 
+          <CardWithDetails title={title} description={description} genres={genres} rating={rating} /> 
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default Card;
