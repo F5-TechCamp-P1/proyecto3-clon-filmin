@@ -51,6 +51,7 @@ La plataforma incluye:
 - Contiene enlaces al **repositorio de GitHub** de este proyecto e íconos que enlazan a los **perfiles de GitHub** de las personas que trabajaron en el desarrollo. 
 - Es claro, accesible y responsivo, adaptándose a diferentes tamaños de pantalla.
 
+##
 ### Stack:
 HTML5, CSS3, JavaScript, React, Tailwind.
 
@@ -60,4 +61,3 @@ HTML5, CSS3, JavaScript, React, Tailwind.
 - Librería React Slick implementada en las categorías: npm install react-slick --save
 - Librería React Responsive Carousel implementada en el carousel: npm i react-responsive-carousel
 - Librería React Icons implementada en íconos del footer: npm install react-icons
--
