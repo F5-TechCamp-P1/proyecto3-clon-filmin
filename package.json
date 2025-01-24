@@ -1,9 +1,10 @@
 {
   "name": "proyecto3-clon-filmin",
+  "homepage": "https://github.com/F5-TechCamp-P1/proyecto3-clon-filmin",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/F5-TechCamp-P1/proyecto3-clon-filmin",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
