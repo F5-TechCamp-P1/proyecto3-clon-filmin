@@ -1,5 +1,3 @@
-import React from 'react';
-
 function CardWithDetails({ title, description, genres, rating }) {
   return (
     <div className="text-white rounded bg-black p-3">

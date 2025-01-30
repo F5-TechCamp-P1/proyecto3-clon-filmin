@@ -35,4 +35,20 @@ export default [
       ],
     },
   },
-]
+  {
+    // Add override for Vite config
+    files: ['vite.config.js'], // Target the Vite configuration file
+    languageOptions: {
+      globals: {
+        ...globals.node, // Add Node.js globals for this file
+      },
+    },
+    env: {
+      node: true, // Enable Node.js environment
+    },
+    rules: {
+      // Optionally, add rules specific to Vite config
+    },
+  },
+];
+
